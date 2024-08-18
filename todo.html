@@ -1,0 +1,83 @@
+
+<center>
+<body>
+    
+        <header>
+    <h1 class="id">TO-DO-LIST</h1>
+    <div>
+    <p  >A personal to-do list might include things like doctor's appointments, yoga sessions, or year-long resolutions. It could also include a list for renovating a room, or a list to do before going on vacation. 
+    </p>
+    <p>A to-do list for work could include a list for actionable tasks, another for future project ideas, or a list for work-related goals. </p></div>
+    <h1>MY TO-DO-LIST</h1>
+    <p>
+        
+        Hit the gym<hr>
+        Pay bills<hr>
+        Meet George<hr>
+        Buy eggs<hr>
+        Read a book<hr>
+        Organize offic<hr>
+    
+    
+    </p>
+    <p>ADD YOUR LIST AND DO IT WITHOUT FAIL</p>
+
+<input class="i"   placeholder="Add Task..." id="on">
+<button class="io" type="submit" onclick ="add()">
+    Add
+</button>
+
+<ul class="dd" id="addcon">
+    <li>
+        Hello
+        <button class="btn" onclick="del(event)">Delete</button>
+
+    </li>
+    
+
+</ul>
+
+</header>
+
+</body>
+<script>
+      var ul=document.getElementById("addcon")
+      var input=document.getElementById("on")
+      function add()
+      {
+        var listitem=document.createElement("li")
+        listitem.innerHTML=input.value +  "<button class='btn'  onclick='del(event)'> Delete </button> "
+        ul.append(listitem)
+      }
+      function del(event)
+      {
+        event.target.parentElement.remove()
+
+      }
+</script>
+</center>
+<style>
+    .btn{
+        background-color: red;
+    }
+    .id{
+        background-color: brown;
+        padding: 5px;
+        width: 700px;
+    }
+    .i{background-color: bisque;
+        padding: 5px;
+        width: 600px;
+        
+    }
+    .io{background-color: bisque;
+        padding: 5px;
+        width: 100px;
+        
+    }
+    .dd{
+        
+        padding : 5px;
+        width: 200px;
+    }
+</style>
